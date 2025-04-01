@@ -1,16 +1,6 @@
 ## About Me
 
-What's up? hey\|you
-
 I am an awesome student at Lehigh, you should hire me!
-
-<!-- Upload your own photo and change the path -->
-
-<p style="text-align:center;">
-  <img class="img-circle" src="https://github.com/donbowen/donbowen.github.io/raw/master/images/logo.png" width="50%">
-</p>
-
----
 
 ## Portfolio
 
@@ -53,6 +43,14 @@ Sell yourself!
 ---
 
 ## Hobbies
+
+<!-- Upload your own photo and change the path -->
+
+<p style="text-align:center;">
+  <img class="img-circle" src="https://github.com/donbowen/donbowen.github.io/raw/master/images/logo.png" width="50%">
+</p>
+
+---
 
 Maybe include a little about these, especially if they are the kinds of things that work well in interviews.
 
