@@ -2,49 +2,139 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Maya Zucker</title>
+  <title>Ryan Schmid</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Link to your external stylesheet -->
   <link rel="stylesheet" href="{{ '/assets/css/wide_style.scss' | relative_url }}">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
   <style>
-    /* Example fallback styling for the parallax effect */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      background-color: #121212;
+    }
+
+    .Home-nav {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .Home-nav-title {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 2px;
+    }
+
+    .Home-nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 0.5rem;
+    }
+
+    .nav-link {
+      cursor: pointer;
+      font-size: 1rem;
+      color: white;
+    }
+
     .parallax {
       background-image: url("/images/Lehigh.jpg");
       background-attachment: fixed;
       background-size: cover;
       background-position: center;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .Home-bkg-overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem;
+    }
+
+    .Home-center {
+      display: flex;
+      align-items: center;
+      max-width: 1000px;
+      background-color: #333;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .Home-headshot {
+      width: 200px;
+      border-radius: 5px;
+      margin-right: 2rem;
+    }
+
+    .Home-center-text {
+      max-width: 600px;
+    }
+
+    .Home-welcome {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .Home-intro {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .Links a {
+      color: #90caf9;
+      margin-right: 1rem;
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+
+    .Links a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
+
 <body>
 
   <div id="Home">
+    <!-- Navigation Bar -->
     <div class="Home-nav">
-      <h1 class="Home-nav-title">MAYA ZUCKER</h1>
-      <div class="Home-nav-list">
-        <div class="Home-nav-accent"></div>
-        <div class="Home-nav-links">
-          <p class="nav-link" onclick="scrollToSection('Home')">HOME</p>
-          <p class="nav-link" onclick="scrollToSection('Experience')">EXPERIENCE</p>
-          <p class="nav-link" onclick="scrollToSection('Education')">EDUCATION</p>
-          <p class="nav-link" onclick="scrollToSection('Projects')">PROJECTS</p>
-        </div>
-        <div class="Home-nav-accent"></div>
+      <h1 class="Home-nav-title">RYAN SCHMID</h1>
+      <div class="Home-nav-links">
+        <p class="nav-link" onclick="scrollToSection('Home')">HOME</p>
+        <p class="nav-link" onclick="scrollToSection('Experience')">EXPERIENCE</p>
+        <p class="nav-link" onclick="scrollToSection('Education')">EDUCATION</p>
+        <p class="nav-link" onclick="scrollToSection('Projects')">PROJECTS</p>
       </div>
     </div>
 
+    <!-- Hero Section -->
     <div class="Home-bkg parallax">
       <div class="Home-bkg-overlay">
         <div class="Home-center">
-          <img class="Home-headshot" src="images/Maya Zucker Headshot.JPG" alt="Maya Zucker" />
+          <img class="Home-headshot" src="images/Maya Zucker Headshot.JPG" alt="Ryan Schmid" />
           <div class="Home-center-text">
             <p class="Home-welcome">Welcome</p>
             <p class="Home-intro">I'm Ryan, a Technology Consultant at EY</p>
 
-            <!-- Replace this with actual social/link content -->
-            <div class="Links" style="justify-content: left;">
-              <!-- Example link buttons -->
-              <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-              <a href="https://github.com" target="_blank">GitHub</a>
+            <!-- Social / Contact Links -->
+            <div class="Links">
+              <a href="resume.pdf" target="_blank" title="Resume"><i class="fas fa-file-alt"></i></a>
+              <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="mailto:ryan@example.com" title="Email"><i class="fas fa-envelope"></i></a>
             </div>
 
           </div>
