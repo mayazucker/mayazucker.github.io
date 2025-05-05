@@ -1,34 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Ryan W. Schmid</title>
+  <meta charset="UTF-8" />
+  <title>Ryan Schmid</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./Home.css" />
+  <link rel="stylesheet" href="../../index.css" />
   <style>
-    body {
-      font-family: 'Helvetica Neue', sans-serif;
-      margin: 0;
-      padding: 2rem;
-      line-height: 1.6;
-      background-color: #fff;
-      color: #111;
-      max-width: 600px;
-      margin: auto;
-    }
-
-    h1 {
-      font-size: 2rem;
-      font-weight: 600;
-    }
-
-    section {
-      margin-bottom: 2rem;
+    /* Example fallback styling for the parallax effect */
+    .parallax {
+      background-image: url("../../images/home-bkg-lehigh.jpg");
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
     }
   </style>
 </head>
 <body>
-  <section>
-    <h1>Hi, I’m Ryan — a product designer in San Francisco.</h1>
-    <p>I help early-stage startups create products people love.</p>
-  </section>
+
+  <div id="Home">
+    <div class="Home-nav">
+      <h1 class="Home-nav-title">RYAN SCHMID</h1>
+      <div class="Home-nav-list">
+        <div class="Home-nav-accent"></div>
+        <div class="Home-nav-links">
+          <p class="nav-link" onclick="scrollToSection('Home')">HOME</p>
+          <p class="nav-link" onclick="scrollToSection('Experience')">EXPERIENCE</p>
+          <p class="nav-link" onclick="scrollToSection('Education')">EDUCATION</p>
+          <p class="nav-link" onclick="scrollToSection('Projects')">PROJECTS</p>
+        </div>
+        <div class="Home-nav-accent"></div>
+      </div>
+    </div>
+
+    <div class="Home-bkg parallax">
+      <div class="Home-bkg-overlay">
+        <div class="Home-center">
+          <img class="Home-headshot" src="../../images/home-my-headshot.jpg" alt="Ryan Schmid" />
+          <div class="Home-center-text">
+            <p class="Home-welcome">Welcome</p>
+            <p class="Home-intro">I'm Ryan, a Technology Consultant at EY</p>
+
+            <!-- Replace this with actual social/link content -->
+            <div class="Links" style="justify-content: left;">
+              <!-- Example link buttons -->
+              <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+              <a href="https://github.com" target="_blank">GitHub</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function scrollToSection(id) {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+
 </body>
 </html>
+
