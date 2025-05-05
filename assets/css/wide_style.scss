@@ -1,35 +1,29 @@
----
----
+$primary-color: #0077cc;
+$max-width: 600px;
+
 body {
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0 auto;
   padding: 2rem;
   line-height: 1.6;
-  max-width: 600px;
+  max-width: $max-width;
   background: #fff;
   color: #111;
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  section {
+    margin-bottom: 2rem;
+  }
 }
 
-h1 {
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-h2 {
-  margin-top: 2rem;
-  font-size: 1.5rem;
-}
-
-a {
-  color: #0077cc;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-section {
   margin-bottom: 2rem;
 }
 
