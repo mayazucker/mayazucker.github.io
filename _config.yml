@@ -1,3 +1,9 @@
+sass:
+  sass_dir: _sass   # or assets/css
+  style: compressed # or expanded
+
+
+
 title: Maya Zucker # your name (or website title) here
 logo: "/images/Maya Zucker Headshot.JPG?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
