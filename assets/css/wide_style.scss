@@ -1,20 +1,35 @@
 ---
 ---
-
-@import "{{ site.theme }}";
-
-@media print, screen and (min-width: 1200px) {
-  .wrapper {
-    width:1200px;
-    // left side is 270
-    // 1200-270 = 930
-    // 30px free room
-    margin:0 auto;
-  }
-
-  section {
-    width:900px;
-    float:right;
-    padding-bottom:50px;
-  }
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0 auto;
+  padding: 2rem;
+  line-height: 1.6;
+  max-width: 600px;
+  background: #fff;
+  color: #111;
 }
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h2 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
