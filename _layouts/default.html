@@ -440,37 +440,17 @@
           scores of the 10-Ks against multiple dictionaries to indicate if the 10-K had a more positive or negative sentiment. We then evaluated the 
           correlation between each sentiment dictionary and the return. In the end, I found no significant correlation between my sentiment 
           dictionaries and stock returns on the filing date.</p>
-        <p style="margin: 0.3rem 0; color: white;">Project Process</p>
-        <p style="max-width: 800px; margin: 0 auto; line-height: 1.8;">To accomplish this task, we took the following steps:
-1. Extracted the list of firms listed on the S&P 500 from the S&P 500 page on wikipedia
-2. Downloaded 10-K files from the SEC website during the year 2022
-3. Loaded five sentiment dictionaries
-4. Looped over the sample list to add accession number, filing date, positive sentiment scores per dictionary, and negative sentiment scores per dictionary
-5. Downloaded list of returns for each stock in 2022
-6. Merged sample list with returns list by ticker, filing date, and return date
-7. Evaluated correlation per sentiment dictionary in both positive and negative by return</p>
         <p style="margin: 0.3rem 0; color: white;">Project Sample</p>
         <p style="max-width: 800px; margin: 0 auto; line-height: 1.8;">Our sample is the list of stocks listed on the S&P 500 from December 28, 2022. 
           Our total sample size is 503.</p>
-        <p style="margin: 0.3rem 0; color: white;">Project Return Variables</p>
-        <p style="max-width: 800px; margin: 0 auto; line-height: 1.8;">To find the return variables, we used the following steps:
-1. Import urlopen from the rllib.request library
-2. Import BytesIO from the io library
-3. Copy the "crsp_2022_only.zip" file URL from the Stock Returns (CRSP) folder
-4. Use the following code to read the zip file and create a varaible to save the data
-```python
-url = 'https://github.com/LeDataSciFi/data/blob/main/Stock%20Returns%20(CRSP)/crsp_2022_only.zip?raw=true'
-
-with urlopen(url) as request:
-    data = BytesIO(request.read())
-
-with ZipFile(data) as archive:
-    with archive.open(archive.namelist()[0]) as stata:
-        returns = pd.read_stata(stata)
-```
-This saved dataset includes daily returns for each stock for 2022. For my analysis, I only want returns for the filing date of the 10-K. To do this I used a left merge on the S&P 500 data where ticker symbol matched and the return date matched the filing date.
-
-To create a more comprehensive analysis, it's best to look at the return data on the day of the 10-K filing and at return data on days surrounding the filing date.</p>
+        <p style="margin: 0.3rem 0; color: white;">Project Results: Return Variables and LM Sentiment vs Return Variables and ML Sentiment</p>
+        <p style="max-width: 800px; margin: 0 auto; line-height: 1.8;">The return variable on the filing date has a negative correlation with LM 
+          positive, LM negative, and ML negative dictionaries. The return variable on the filing date has a positive correlation with ML positive. 
+          Additionally, LM positive has the greatest magnitude of correlation while LM negative and ML negative share the same correlation.</p>
+        <p style="margin: 0.3rem 0; color: white;">Project Results: Return Variables and LM Sentiment vs Return Variables and ML Sentiment</p>
+        <p style="max-width: 800px; margin: 0 auto; line-height: 1.8;">The return variable on the filing date has a negative correlation with LM 
+          positive, LM negative, and ML negative dictionaries. The return variable on the filing date has a positive correlation with ML positive. 
+          Additionally, LM positive has the greatest magnitude of correlation while LM negative and ML negative share the same correlation.</p>
       </div>
     </div>
 
